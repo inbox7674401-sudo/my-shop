@@ -1,0 +1,12 @@
+{
+  "items": [
+    {
+      "in_stock": true,
+      "title": "Сёмга свежая ",
+      "category": "Рыба",
+      "price": 25,
+      "image": "/images/uploads/1000016686.jpg",
+      "description": "Свежая семга"
+    }
+  ]
+}
