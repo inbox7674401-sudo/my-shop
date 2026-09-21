@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main # или master, в зависимости от вашей ветки
+
+# ГЛОБАЛЬНЫЕ НАСТРОЙКИ МЕДИА
+# Физический путь в репозитории, куда CMS будет сохранять файлы
+media_folder: "public/images/uploads" 
+# URL-путь, по которому сайт будет искать эти файлы в браузере
+public_folder: "/images/uploads" 
+
+collections:
+  - name: "catalog"
+    label: "Каталог"
+    folder: "content/catalog" # Папка, где лежат ваши записи (json/md)
+    create: true
+    fields:
+      - {label: "Название", name: "title", widget: "string"}
+      - {label: "Категория", name: "category", widget: "string"}
+      - {label: "Цена (руб.)", name: "price", widget: "number"}
+      - {label: "Фото", name: "image", widget: "image", required: true} # Убедитесь, что widget именно image
+      - {label: "Описание", name: "description", widget: "text"}
+      - {label: "В наличии", name: "in_stock", widget: "boolean", default: true}
